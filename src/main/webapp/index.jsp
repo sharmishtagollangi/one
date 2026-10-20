@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nova · modern portfolio</title>
-  <!-- Google Fonts + Font Awesome for clean icons -->
+  <title>LUXE & CO. · modern clothing</title>
+  <!-- Google Fonts for clean typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons (free) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* ---------- RESET & GLOBAL ---------- */
     * {
       margin: 0;
       padding: 0;
@@ -18,591 +18,824 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: #f9fafc;
-      color: #1a1e2b;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #fefcf7;
+      color: #1e1e1e;
       line-height: 1.5;
-      scroll-behavior: smooth;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    ul {
-      list-style: none;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 2rem;
     }
 
-    /* ---------- HEADER / NAV ---------- */
-    .navbar {
+    /* ---------- HEADER ---------- */
+    header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 1.75rem 2rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      background: #fefcf7;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      background: rgba(254, 252, 247, 0.92);
     }
 
     .logo {
-      font-weight: 700;
       font-size: 1.8rem;
+      font-weight: 700;
       letter-spacing: -0.03em;
-      background: linear-gradient(135deg, #1e2b5e, #3e5cc9);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: #1e1e1e;
+      text-decoration: none;
+    }
+
+    .logo span {
+      font-weight: 300;
+      color: #9b7b5e;
     }
 
     .nav-links {
       display: flex;
       gap: 2.5rem;
+      list-style: none;
     }
 
     .nav-links a {
+      text-decoration: none;
+      color: #1e1e1e;
       font-weight: 500;
       font-size: 1rem;
-      color: #2e3440;
       transition: color 0.2s;
-      position: relative;
+      letter-spacing: -0.01em;
     }
 
     .nav-links a:hover {
-      color: #3e5cc9;
+      color: #9b7b5e;
     }
 
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background: #3e5cc9;
-      transition: width 0.2s;
+    .header-icons {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 1.2rem;
+      color: #1e1e1e;
     }
 
-    .nav-links a:hover::after {
-      width: 100%;
+    .header-icons i {
+      cursor: pointer;
+      transition: transform 0.2s, color 0.2s;
     }
 
-    .btn-outline {
-      border: 2px solid #3e5cc9;
-      padding: 8px 20px;
-      border-radius: 30px;
-      font-weight: 600;
-      color: #3e5cc9;
-      transition: all 0.2s;
-    }
-
-    .btn-outline:hover {
-      background: #3e5cc9;
-      color: white;
-      transform: translateY(-1px);
-    }
-
-    .btn-primary {
-      background: #3e5cc9;
-      color: white;
-      padding: 12px 32px;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      display: inline-block;
-      transition: all 0.2s;
-      box-shadow: 0 8px 18px -6px rgba(62, 92, 201, 0.4);
-    }
-
-    .btn-primary:hover {
-      background: #2b46a5;
+    .header-icons i:hover {
+      color: #9b7b5e;
       transform: translateY(-2px);
-      box-shadow: 0 14px 24px -8px rgba(62, 92, 201, 0.5);
     }
 
     /* ---------- HERO ---------- */
     .hero {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
-      padding: 60px 0 80px;
       flex-wrap: wrap;
+      align-items: center;
+      gap: 4rem;
+      padding: 4rem 2rem 5rem;
     }
 
     .hero-content {
-      flex: 1 1 300px;
+      flex: 1 1 380px;
     }
 
-    .hero-badge {
+    .hero-content .tag {
       display: inline-block;
-      background: #e9ecf5;
-      color: #2b3b7c;
+      background: #e8dfd5;
+      color: #4b3a2c;
+      font-size: 0.75rem;
       font-weight: 600;
-      font-size: 0.85rem;
-      padding: 6px 14px;
-      border-radius: 50px;
-      margin-bottom: 24px;
-      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      margin-bottom: 1.8rem;
     }
 
     .hero-content h1 {
-      font-size: 3.5rem;
+      font-size: clamp(2.5rem, 5vw, 4rem);
       font-weight: 700;
-      line-height: 1.2;
+      line-height: 1.1;
       letter-spacing: -0.03em;
-      color: #121826;
-      margin-bottom: 20px;
+      margin-bottom: 1.5rem;
+      color: #1e1e1e;
     }
 
-    .highlight {
-      color: #3e5cc9;
-      border-bottom: 4px solid #d0d9ff;
+    .hero-content h1 .highlight {
+      color: #9b7b5e;
+      font-weight: 600;
     }
 
     .hero-content p {
-      font-size: 1.2rem;
-      color: #4e586d;
-      max-width: 520px;
-      margin-bottom: 32px;
+      font-size: 1.1rem;
+      color: #5a5a5a;
+      max-width: 450px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 2.2rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      letter-spacing: 0.2px;
+    }
+
+    .btn-primary {
+      background-color: #1e1e1e;
+      color: #fefcf7;
+      box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-primary:hover {
+      background-color: #9b7b5e;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 25px -8px rgba(155, 123, 94, 0.4);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: #1e1e1e;
+      border: 1.5px solid #1e1e1e;
+    }
+
+    .btn-secondary:hover {
+      background-color: #1e1e1e;
+      color: #fefcf7;
+      transform: translateY(-3px);
     }
 
     .hero-image {
-      flex: 0 1 360px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(145deg, #eef1fa, #ffffff);
-      border-radius: 50% 30% 50% 30% / 40% 50% 40% 50%;
-      padding: 30px 30px;
-      box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.02), -10px -10px 30px #ffffff inset;
-    }
-
-    .avatar-icon {
-      font-size: 13rem;
-      color: #2d3f7a;
-      background: white;
-      width: 250px;
-      height: 250px;
+      flex: 1 1 380px;
+      background: #e8e0d7;
+      border-radius: 40% 60% 40% 60% / 50% 40% 60% 50%;
+      min-height: 420px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 50%;
-      box-shadow: 0 25px 40px -10px rgba(45, 63, 122, 0.2);
-      transition: transform 0.3s;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 30px 40px -25px rgba(0,0,0,0.2);
     }
 
-    .avatar-icon i {
-      font-size: 8rem;
-      color: #3e5cc9;
-      filter: drop-shadow(0 10px 12px rgba(62, 92, 201, 0.15));
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: inherit;
     }
 
-    /* ---------- SECTION TITLES ---------- */
+    /* decorative floating shapes */
+    .hero-image::before {
+      content: "✦";
+      position: absolute;
+      top: 10%;
+      left: 5%;
+      font-size: 3rem;
+      color: rgba(155, 123, 94, 0.3);
+      transform: rotate(15deg);
+      z-index: 2;
+    }
+
+    .hero-image::after {
+      content: "◍";
+      position: absolute;
+      bottom: 8%;
+      right: 5%;
+      font-size: 4rem;
+      color: rgba(255, 255, 255, 0.2);
+      z-index: 2;
+    }
+
+    /* ---------- CATEGORIES / FEATURED ---------- */
     .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
       font-size: 2.2rem;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: -0.02em;
-      margin-bottom: 12px;
-      color: #141b2b;
+      margin-bottom: 0.75rem;
     }
 
-    .section-subtitle {
-      font-size: 1.1rem;
-      color: #5c6479;
-      margin-bottom: 48px;
-      max-width: 600px;
+    .section-title p {
+      color: #7a7a7a;
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: 0.3px;
     }
 
-    /* ---------- PROJECTS GRID ---------- */
-    .projects-section {
-      padding: 80px 0;
-      background: white;
-      border-radius: 60px 60px 0 0;
+    .categories {
+      padding: 2rem 2rem 6rem;
     }
 
-    .grid-3 {
+    .category-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
     }
 
-    .project-card {
-      background: #f9fafc;
-      border-radius: 32px;
-      padding: 30px 28px;
-      transition: all 0.25s ease;
-      border: 1px solid #edf0f7;
+    .category-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 15px 30px -15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(155, 123, 94, 0.1);
+      cursor: pointer;
     }
 
-    .project-card:hover {
-      transform: translateY(-6px);
-      background: white;
-      box-shadow: 0 30px 40px -20px rgba(0, 0, 0, 0.15);
-      border-color: transparent;
+    .category-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 40px -20px rgba(155, 123, 94, 0.2);
+      border-color: #e8dfd5;
     }
 
-    .project-icon {
-      font-size: 2.4rem;
-      background: linear-gradient(145deg, #e9edfa, #ffffff);
+    .category-icon {
+      font-size: 2.2rem;
+      color: #9b7b5e;
+      margin-bottom: 1rem;
+      background: #f5efe9;
       width: 70px;
       height: 70px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 20px;
-      margin-bottom: 28px;
-      color: #3e5cc9;
-      box-shadow: 6px 6px 12px #e2e6f0, -6px -6px 12px #ffffff;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .project-card h3 {
-      font-size: 1.4rem;
+    .category-card h3 {
+      font-size: 1.2rem;
       font-weight: 600;
-      margin-bottom: 12px;
-      color: #1a1f2e;
+      margin-bottom: 0.5rem;
     }
 
-    .project-card p {
-      color: #5b6277;
-      margin-bottom: 24px;
-      font-size: 0.98rem;
+    .category-card p {
+      font-size: 0.9rem;
+      color: #7a7a7a;
+      font-weight: 300;
     }
 
-    .project-tag {
-      display: inline-block;
-      background: white;
-      padding: 6px 16px;
+    /* ---------- PRODUCT GRID (BEST SELLERS) ---------- */
+    .bestsellers {
+      padding: 3rem 2rem 6rem;
+      background: #faf7f2;
+      border-radius: 60px 60px 0 0;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.02);
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 35px -15px rgba(155, 123, 94, 0.2);
+    }
+
+    .product-image {
+      height: 280px;
+      background: #e8e0d7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.03);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: #1e1e1e;
+      color: #fefcf7;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.3rem 1rem;
       border-radius: 40px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      z-index: 2;
+    }
+
+    .product-info {
+      padding: 1.5rem 1.5rem 1.8rem;
+    }
+
+    .product-info h4 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .product-category {
       font-size: 0.8rem;
-      font-weight: 600;
-      color: #3e5cc9;
-      border: 1px solid #dbe2f5;
-      letter-spacing: 0.3px;
-    }
-
-    /* ---------- ABOUT / SKILLS ---------- */
-    .about-section {
-      padding: 80px 0;
-    }
-
-    .about-grid {
-      display: flex;
-      gap: 60px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .about-text {
-      flex: 2 1 380px;
-    }
-
-    .about-text h2 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      letter-spacing: -0.02em;
-    }
-
-    .about-text p {
-      font-size: 1.1rem;
-      color: #414b60;
-      margin-bottom: 28px;
-    }
-
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .skill-item {
-      background: white;
-      padding: 10px 24px;
-      border-radius: 40px;
+      color: #9b7b5e;
       font-weight: 500;
-      color: #1e2a4a;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
-      border: 1px solid #e4e9f2;
-      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.75rem;
     }
 
-    .about-stats {
-      flex: 1 1 240px;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      background: white;
-      padding: 36px 30px;
-      border-radius: 40px;
-      box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.08);
-      border: 1px solid #f0f3fa;
-    }
-
-    .stat-item {
+    .product-price {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1e1e1e;
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 0.75rem;
     }
 
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #3e5cc9;
-      line-height: 1;
+    .old-price {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #b0b0b0;
+      text-decoration: line-through;
     }
 
-    .stat-label {
-      color: #5f677b;
-      font-weight: 500;
-      font-size: 0.95rem;
-    }
-
-    /* ---------- CTA BANNER ---------- */
-    .cta-banner {
-      background: linear-gradient(120deg, #19224b, #26357a);
-      border-radius: 60px;
-      padding: 60px 40px;
-      margin: 60px 0 40px;
+    .add-to-cart {
+      margin-top: 1.2rem;
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
     }
 
-    .cta-banner h2 {
-      color: white;
-      font-size: 2.1rem;
+    .add-to-cart button {
+      background: transparent;
+      border: 1.5px solid #e0d6cc;
+      color: #1e1e1e;
+      padding: 0.6rem 1.5rem;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.25s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: inherit;
+    }
+
+    .add-to-cart button i {
+      font-size: 0.9rem;
+    }
+
+    .add-to-cart button:hover {
+      background: #1e1e1e;
+      color: #fefcf7;
+      border-color: #1e1e1e;
+    }
+
+    .rating {
+      color: #c9a87c;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+    }
+
+    /* ---------- NEWSLETTER ---------- */
+    .newsletter {
+      padding: 5rem 2rem;
+      background: #1e1e1e;
+      color: #fefcf7;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .newsletter h3 {
+      font-size: 2rem;
       font-weight: 600;
       letter-spacing: -0.02em;
-      max-width: 600px;
+      margin-bottom: 1rem;
     }
 
-    .cta-banner .btn-primary {
-      background: white;
-      color: #1e2b5e;
-      box-shadow: none;
-      font-size: 1.1rem;
+    .newsletter p {
+      color: #b0b0b0;
+      font-weight: 300;
+      max-width: 500px;
+      margin: 0 auto 2.5rem;
     }
 
-    .cta-banner .btn-primary:hover {
-      background: #f0f3ff;
-      transform: translateY(-2px);
+    .newsletter-form {
+      display: flex;
+      max-width: 480px;
+      margin: 0 auto;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .newsletter-form input {
+      flex: 1 1 240px;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      border: none;
+      background: #2e2e2e;
+      color: #fefcf7;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      transition: background 0.2s;
+    }
+
+    .newsletter-form input::placeholder {
+      color: #8a8a8a;
+      font-weight: 300;
+    }
+
+    .newsletter-form input:focus {
+      background: #3a3a3a;
+    }
+
+    .newsletter-form button {
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      border: none;
+      background: #9b7b5e;
+      color: #fefcf7;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.2s;
+      font-family: inherit;
+    }
+
+    .newsletter-form button:hover {
+      background: #b08e6e;
+      transform: scale(1.02);
     }
 
     /* ---------- FOOTER ---------- */
     footer {
-      padding: 40px 0;
-      text-align: center;
-      color: #70798e;
-      border-top: 1px solid #e5eaf2;
-      margin-top: 30px;
-      font-size: 0.95rem;
+      padding: 3rem 2rem 2rem;
+      background: #fefcf7;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: #1e1e1e;
+      text-decoration: none;
+    }
+
+    .footer-logo span {
+      font-weight: 300;
+      color: #9b7b5e;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #5a5a5a;
+      font-size: 0.9rem;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #9b7b5e;
     }
 
     .social-icons {
       display: flex;
-      justify-content: center;
-      gap: 28px;
-      margin-bottom: 24px;
+      gap: 1.5rem;
+      font-size: 1.2rem;
+      color: #5a5a5a;
     }
 
-    .social-icons a {
-      color: #404b62;
-      font-size: 1.6rem;
-      transition: all 0.2s;
+    .social-icons i {
+      cursor: pointer;
+      transition: color 0.2s, transform 0.2s;
     }
 
-    .social-icons a:hover {
-      color: #3e5cc9;
-      transform: scale(1.1);
+    .social-icons i:hover {
+      color: #9b7b5e;
+      transform: translateY(-2px);
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: #9a9a9a;
+      font-weight: 300;
     }
 
     /* ---------- RESPONSIVE ---------- */
-    @media (max-width: 700px) {
-      .hero-content h1 {
-        font-size: 2.6rem;
-      }
-
-      .navbar {
-        flex-direction: column;
-        gap: 16px;
+    @media (max-width: 768px) {
+      header {
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1.25rem 1.5rem;
       }
 
       .nav-links {
-        gap: 1.8rem;
-        flex-wrap: wrap;
+        gap: 1.5rem;
+        order: 3;
+        width: 100%;
         justify-content: center;
+        padding-top: 0.5rem;
       }
 
       .hero {
-        padding: 40px 0 60px;
-        justify-content: center;
-        text-align: center;
-      }
-
-      .hero-content p {
-        margin-left: auto;
-        margin-right: auto;
+        padding: 2rem 1.5rem 3rem;
+        gap: 2rem;
       }
 
       .hero-image {
-        flex: 0 1 260px;
-        padding: 10px;
+        min-height: 300px;
       }
 
-      .avatar-icon {
-        width: 200px;
-        height: 200px;
+      .container {
+        padding: 0 1rem;
       }
 
-      .avatar-icon i {
-        font-size: 6rem;
+      .bestsellers {
+        border-radius: 30px 30px 0 0;
+        padding: 2rem 1.5rem 4rem;
       }
 
-      .cta-banner {
+      .footer-content {
+        flex-direction: column;
         text-align: center;
+      }
+
+      .footer-links {
         justify-content: center;
-      }
-
-      .cta-banner h2 {
-        font-size: 1.7rem;
-      }
-
-      .section-title {
-        font-size: 1.9rem;
+        gap: 1.5rem;
       }
     }
 
     @media (max-width: 480px) {
-      .container {
-        padding: 0 18px;
+      .btn {
+        padding: 0.85rem 1.8rem;
+        font-size: 0.9rem;
       }
 
-      .btn-outline {
-        padding: 6px 16px;
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .category-card {
+        padding: 1.5rem 0.75rem;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- header & navigation -->
+  <!-- HEADER -->
   <header>
-    <div class="container navbar">
-      <div class="logo">nova<span style="color:#3e5cc9;">.</span></div>
-      <ul class="nav-links">
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#" class="btn-outline">Contact</a></li>
-      </ul>
+    <a href="#" class="logo">LUXE <span>& CO.</span></a>
+    <ul class="nav-links">
+      <li><a href="#">New In</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Accessories</a></li>
+      <li><a href="#">Journal</a></li>
+    </ul>
+    <div class="header-icons">
+      <i class="fas fa-search"></i>
+      <i class="far fa-user"></i>
+      <i class="far fa-heart"></i>
+      <i class="fas fa-shopping-bag"></i>
     </div>
   </header>
 
-  <!-- hero section -->
   <main>
-    <div class="container hero">
+    <!-- HERO -->
+    <section class="hero container">
       <div class="hero-content">
-        <span class="hero-badge"><i class="fas fa-code" style="margin-right: 6px;"></i> product engineer</span>
-        <h1>Build <span class="highlight">digital</span> products that matter.</h1>
-        <p>I’m Alex — I design and develop clean, performant web experiences with a focus on simplicity and user delight.</p>
-        <a href="#" class="btn-primary">See my work <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+        <span class="tag">spring / summer 2025</span>
+        <h1>Elevate your <span class="highlight">everyday</span> style.</h1>
+        <p>Timeless pieces, consciously crafted. Discover the new collection of refined essentials made for the modern wardrobe.</p>
+        <div class="btn-group">
+          <a href="#" class="btn btn-primary">Shop collection <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+          <a href="#" class="btn btn-secondary">Explore lookbook</a>
+        </div>
       </div>
       <div class="hero-image">
-        <div class="avatar-icon">
-          <i class="fas fa-user-astronaut"></i>
+        <!-- Placeholder visual with subtle texture — you can replace with an actual image -->
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1200&auto=format&fit=crop" alt="Fashion model wearing modern clothing" style="opacity:0.95;">
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories container">
+      <div class="section-title">
+        <h2>Shop by category</h2>
+        <p>Refined pieces for every moment</p>
+      </div>
+      <div class="category-grid">
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-tshirt"></i></div>
+          <h3>Essentials</h3>
+          <p>Everyday basics</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-female"></i></div>
+          <h3>Women</h3>
+          <p>Modern silhouettes</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-male"></i></div>
+          <h3>Men</h3>
+          <p>Tailored comfort</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-gem"></i></div>
+          <h3>Accessories</h3>
+          <p>Finishing touches</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- projects / work -->
-    <section class="projects-section">
+    <!-- BEST SELLERS -->
+    <section class="bestsellers">
       <div class="container">
-        <h2 class="section-title">Featured projects</h2>
-        <p class="section-subtitle">A selection of recent work — from concept to launch.</p>
-        <div class="grid-3">
-          <!-- card 1 -->
-          <div class="project-card">
-            <div class="project-icon"><i class="fas fa-chart-pie"></i></div>
-            <h3>Insightly</h3>
-            <p>Analytics dashboard with real‑time visualization and custom reporting for product teams.</p>
-            <span class="project-tag">React · D3</span>
+        <div class="section-title">
+          <h2>Best sellers</h2>
+          <p>Loved by our community</p>
+        </div>
+        <div class="product-grid">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <div class="product-image">
+              <span class="product-badge">New</span>
+              <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=800&auto=format&fit=crop" alt="Oversized cotton shirt">
+            </div>
+            <div class="product-info">
+              <div class="product-category">Women · Shirts</div>
+              <h4>Oversized Cotton Shirt</h4>
+              <div class="product-price">$89 <span class="old-price">$120</span></div>
+              <div class="add-to-cart">
+                <button><i class="fas fa-shopping-bag"></i> Add</button>
+                <span class="rating">★★★★★</span>
+              </div>
+            </div>
           </div>
-          <!-- card 2 -->
-          <div class="project-card">
-            <div class="project-icon"><i class="fas fa-cart-shopping"></i></div>
-            <h3>Marketplace</h3>
-            <p>Modular e‑commerce platform with headless CMS and global payment integration.</p>
-            <span class="project-tag">Next.js · Stripe</span>
+
+          <!-- Product 2 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=800&auto=format&fit=crop" alt="Merino wool sweater">
+            </div>
+            <div class="product-info">
+              <div class="product-category">Men · Knitwear</div>
+              <h4>Merino Wool Sweater</h4>
+              <div class="product-price">$145</div>
+              <div class="add-to-cart">
+                <button><i class="fas fa-shopping-bag"></i> Add</button>
+                <span class="rating">★★★★☆</span>
+              </div>
+            </div>
           </div>
-          <!-- card 3 -->
-          <div class="project-card">
-            <div class="project-icon"><i class="fas fa-pen-fancy"></i></div>
-            <h3>Folio</h3>
-            <p>Collaborative writing tool with real‑time editing and AI‑assisted suggestions.</p>
-            <span class="project-tag">Vue · Firebase</span>
+
+          <!-- Product 3 -->
+          <div class="product-card">
+            <div class="product-image">
+              <span class="product-badge">Bestseller</span>
+              <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop" alt="Wide leg trousers">
+            </div>
+            <div class="product-info">
+              <div class="product-category">Women · Trousers</div>
+              <h4>Wide Leg Trousers</h4>
+              <div class="product-price">$110</div>
+              <div class="add-to-cart">
+                <button><i class="fas fa-shopping-bag"></i> Add</button>
+                <span class="rating">★★★★★</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=800&auto=format&fit=crop" alt="Leather jacket">
+            </div>
+            <div class="product-info">
+              <div class="product-category">Men · Outerwear</div>
+              <h4>Minimal Leather Jacket</h4>
+              <div class="product-price">$299 <span class="old-price">$380</span></div>
+              <div class="add-to-cart">
+                <button><i class="fas fa-shopping-bag"></i> Add</button>
+                <span class="rating">★★★★☆</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- about + skills -->
-    <section class="about-section">
-      <div class="container about-grid">
-        <div class="about-text">
-          <h2>Crafting with intention.</h2>
-          <p>I’ve spent the last 6+ years building products for startups and agencies. I care deeply about accessibility, performance, and clean architecture. My approach is collaborative — from whiteboard to production.</p>
-          <div class="skill-list">
-            <span class="skill-item">React & Next.js</span>
-            <span class="skill-item">TypeScript</span>
-            <span class="skill-item">Node.js</span>
-            <span class="skill-item">UI/UX design</span>
-            <span class="skill-item">Tailwind</span>
-            <span class="skill-item">Figma</span>
-          </div>
-        </div>
-        <div class="about-stats">
-          <div class="stat-item">
-            <span class="stat-number">6+</span>
-            <span class="stat-label">years of experience</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">30+</span>
-            <span class="stat-label">projects delivered</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">12</span>
-            <span class="stat-label">open source contributions</span>
-          </div>
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+      <div class="container">
+        <h3>Stay in the loop</h3>
+        <p>Be the first to know about new arrivals, exclusive offers, and styling tips.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" aria-label="Email address">
+          <button>Subscribe</button>
         </div>
       </div>
     </section>
-
-    <!-- CTA banner -->
-    <div class="container">
-      <div class="cta-banner">
-        <h2>Let’s build something great together.</h2>
-        <a href="#" class="btn-primary">Get in touch <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></a>
-      </div>
-    </div>
   </main>
 
-  <!-- footer -->
+  <!-- FOOTER -->
   <footer>
-    <div class="container">
+    <div class="footer-content">
+      <a href="#" class="footer-logo">LUXE <span>& CO.</span></a>
+      <ul class="footer-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Sustainability</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Returns</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
       <div class="social-icons">
-        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-pinterest"></i>
+        <i class="fab fa-tiktok"></i>
+        <i class="fab fa-twitter"></i>
       </div>
-      <p>© 2025 Nova — designed & built with <i class="fas fa-heart" style="color: #3e5cc9;"></i></p>
+    </div>
+    <div class="copyright">
+      © 2025 LUXE & CO. — Crafted with intention.
     </div>
   </footer>
 
